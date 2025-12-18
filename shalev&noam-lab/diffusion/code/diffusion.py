@@ -6,7 +6,6 @@ import torch
 from PIL import Image
 from diffusers import StableDiffusionXLImg2ImgPipeline
 
-# Strong / stormy prompts (photorealistic, severe conditions)
 PROMPTS = {
     "rain": {
         "prompt": (
@@ -84,10 +83,10 @@ def main():
     ap.add_argument("--input_dir", required=True)
     ap.add_argument("--output_dir", required=True)
 
-    # Realistic SDXL model (you can swap if you want)
+    
     ap.add_argument("--model_id", default="SG161222/RealVisXL_V4.0")
 
-    # Defaults for "stormy" look (stronger than before)
+    
     ap.add_argument("--strength", type=float, default=0.45)
     ap.add_argument("--steps", type=int, default=28)
     ap.add_argument("--cfg", type=float, default=6.5)
@@ -137,7 +136,7 @@ def main():
         pipe.enable_vae_slicing()
         pipe.enable_vae_tiling()
 
-        # prevent black images (SDXL)
+       
         if hasattr(pipe, "upcast_vae"):
             pipe.upcast_vae()
         else:
@@ -145,7 +144,7 @@ def main():
 
         if args.cpu_offload:
             try:
-                import accelerate  # noqa: F401
+                import accelerate  
                 pipe.enable_model_cpu_offload()
             except Exception:
                 print("cpu_offload requested but 'accelerate' not available. Install: pip install accelerate")
