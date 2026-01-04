@@ -45,6 +45,6 @@ Object detection models (YOLO) can overfit to limited real distributions and fai
 
 ### Outputs (`result/`)
 - `road_masks/` - Example generated masks (`*_mask.png`).
-- `animals_synthetic_images/` - Example synthetic outputs (named by image id + prompt).
+- `animals_synthetic_images/` - Example synthetic outputs.
 - `stage2/` - Example stage2 outputs (include class/view and depth factor in filename).
 
