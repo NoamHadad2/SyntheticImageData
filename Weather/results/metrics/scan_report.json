@@ -1,0 +1,97 @@
+{
+  "project_root": "/content/drive/MyDrive/Autonomous_Driving_Project",
+  "annotation_format": "KITTI",
+  "device": "cuda",
+  "seed": 42,
+  "dataset_stats": {
+    "train_images": 7481,
+    "val_images": 7481,
+    "total_images": 14962,
+    "total_objects": 103730,
+    "empty_labels": 0
+  },
+  "class_distribution": {
+    "Pedestrian": 8974,
+    "Truck": 2188,
+    "Car": 57484,
+    "Cyclist": 3254,
+    "DontCare": 22590,
+    "Misc": 1946,
+    "Van": 5828,
+    "Tram": 1022,
+    "Person_sitting": 444
+  },
+  "relevant_classes": [
+    "Pedestrian",
+    "Truck",
+    "Car",
+    "Cyclist",
+    "Misc",
+    "Van",
+    "Tram",
+    "Person_sitting"
+  ],
+  "issues": {
+    "pairing_issues": 37,
+    "validation_issues": 0,
+    "sample_pairing_issues": [
+      {
+        "file": "data/images/val/007481.png",
+        "split": "val",
+        "issue": "Missing label file"
+      },
+      {
+        "file": "data/images/val/007482.png",
+        "split": "val",
+        "issue": "Missing label file"
+      },
+      {
+        "file": "data/images/val/007483.png",
+        "split": "val",
+        "issue": "Missing label file"
+      },
+      {
+        "file": "data/images/val/007484.png",
+        "split": "val",
+        "issue": "Missing label file"
+      },
+      {
+        "file": "data/images/val/007485.png",
+        "split": "val",
+        "issue": "Missing label file"
+      },
+      {
+        "file": "data/images/val/007486.png",
+        "split": "val",
+        "issue": "Missing label file"
+      },
+      {
+        "file": "data/images/val/007487.png",
+        "split": "val",
+        "issue": "Missing label file"
+      },
+      {
+        "file": "data/images/val/007488.png",
+        "split": "val",
+        "issue": "Missing label file"
+      },
+      {
+        "file": "data/images/val/007489.png",
+        "split": "val",
+        "issue": "Missing label file"
+      },
+      {
+        "file": "data/images/val/007490.png",
+        "split": "val",
+        "issue": "Missing label file"
+      }
+    ],
+    "sample_validation_issues": []
+  },
+  "paths": {
+    "images_dir": "data/images",
+    "labels_dir": "data/labels",
+    "train_image_sample": "data/images/train/000000.png",
+    "train_label_sample": "data/labels/000000.txt"
+  }
+}

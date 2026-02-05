@@ -1,0 +1,31 @@
+
+📊 **Key Findings:**
+
+1. **Class Imbalance**: The dataset has significant class imbalance.
+   - Most common: Car (57,484 objects)
+   - Least common: Person_sitting (444 objects)
+   - Imbalance ratio: 129.5x
+   → *Implication: May need class weighting or oversampling during training*
+
+2. **Small Objects**: Significant portion of objects are small.
+   - Small (<1% of image): 45,871 (56.5%)
+   - Very small (<0.5% of image): 30,966 (38.2%)
+   → *Implication: Model may struggle with small pedestrians/cyclists. Consider using larger input resolution.*
+
+3. **Occlusion/Truncation**: Many objects have visibility challenges.
+   - Heavily occluded (level ≥2): 20,598 (25.4%)
+   - Significantly truncated (>50%): 6,058 (7.5%)
+   → *Implication: Synthetic weather generation must preserve already-difficult objects carefully*
+
+4. **Empty Images**: 0 images have no annotated objects.
+   → *Implication: These images may still be useful for background/negative samples*
+
+5. **Aspect Ratios**: Objects have diverse aspect ratios.
+   - Cars: typically wider (aspect ratio > 1)
+   - Pedestrians: typically taller (aspect ratio < 1)
+   → *Implication: Anchor boxes should cover diverse ratios*
+
+6. **Dataset Split**: Train/Val split appears balanced.
+   - Train: 7481 images
+   - Val: 7481 images
+   → *Note: Test split will be created from train in notebook 03*
